@@ -6,7 +6,7 @@
  */
 
 export default [
-	'@rlanz/bull-queue/build/commands/QueueListener',
-	'@rlanz/bull-queue/build/commands/QueueClear',
-	'@rlanz/bull-queue/build/commands/MakeJob',
+	'@zakodium/bull-queue/build/commands/QueueListener',
+	'@zakodium/bull-queue/build/commands/QueueClear',
+	'@zakodium/bull-queue/build/commands/MakeJob',
 ];
