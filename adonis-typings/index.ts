@@ -8,11 +8,11 @@
 declare module '@ioc:Rlanz/Queue' {
 	import type {
 		ConnectionOptions,
-		WorkerOptions,
-		QueueOptions,
-		Queue as BullQueue,
-		JobsOptions,
 		Job,
+		JobsOptions,
+		Queue as BullQueue,
+		QueueOptions,
+		WorkerOptions,
 	} from 'bullmq';
 
 	export type DataForJob<K extends string> = K extends keyof JobsList
@@ -25,8 +25,8 @@ declare module '@ioc:Rlanz/Queue' {
 
 	export type QueueConfig = {
 		connection: ConnectionOptions;
-		queue: QueueOptions;
-		worker: WorkerOptions;
+		queue: Omit<QueueOptions, 'connection'>;
+		worker: Omit<WorkerOptions, 'connection'>;
 		jobs: JobsOptions;
 	};
 
