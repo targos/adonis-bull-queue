@@ -5,8 +5,8 @@
  * @copyright Romain Lanz <romain.lanz@pm.me>
  */
 
-import { Queue, Worker } from 'bullmq';
 import type { JobsOptions } from 'bullmq';
+import { Queue, Worker } from 'bullmq';
 import type { LoggerContract } from '@ioc:Adonis/Core/Logger';
 import type { ApplicationContract } from '@ioc:Adonis/Core/Application';
 import type { DataForJob, JobsList, QueueConfig } from '@ioc:Rlanz/Queue';
@@ -118,5 +118,3 @@ export class BullManager {
 		return this.queues.get(queueName);
 	}
 }
-
-
