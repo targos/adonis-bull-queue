@@ -117,4 +117,11 @@ export class BullManager {
 
 		return this.queues.get(queueName);
 	}
+
+	public async closeAll() {
+		for (const [queueName, queue] of this.queues.entries()) {
+			await queue.close();
+			this.queues.delete(queueName);
+		}
+	}
 }
