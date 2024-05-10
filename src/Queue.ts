@@ -31,9 +31,7 @@ export class BullManager {
 		private options: QueueConfig,
 		private logger: LoggerContract,
 		private app: ApplicationContract
-	) {
-		this.maybeAddQueue('default');
-	}
+	) {}
 
 	public getQueue(queueName?: 'default' | string): Queue {
 		return this.maybeAddQueue(queueName || 'default');
